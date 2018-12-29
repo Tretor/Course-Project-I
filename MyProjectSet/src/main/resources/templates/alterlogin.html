@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>PC Parts Alternative-login</title>
+    </head>
+    <body>
+        <div>Please enter credentials</div>
+        <form action="#" th:action="@{/alterlogin}" method="POST">
+            <p><label for="username">Username</label>: <input type="text" name="username" id="username"/></p>
+            <p><label for="username">Password</label>: <input type="password" name="password" id="password"/></p>
+            <p><input type="submit" value="Login" /></p>
+        </form>
+    </body>
+</html>

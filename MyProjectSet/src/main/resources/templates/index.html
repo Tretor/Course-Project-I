@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>PC parts</title>
+    </head>
+    <body>
+        <h1>Order form for PC parts</h1>
+         <form action="#" th:action="@{/index}" method="POST">
+            <p><label for="name">Name</label>: <input type="text" name="name" id="name"/></p>
+            <p><label for="company">Company</label>: <input type="text" name="company" id="company"/></p>
+            <p><label for="topsecret">Master PC part code</label>: <input type="password" name="topsecret" id="topsecret"/></p>
+            <p><input type="submit" value="Submit" /></p>
+        </form>
+        
+        <h2>Current PC Parts</h2>
+        <ul>
+            <li th:each="item : ${list}">
+                <div th:text="${item}" ></div>
+            </li>
+        </ul>
+        <a href="alterlogin.html">Login to BETA page </a>
+    </body>
+</html>

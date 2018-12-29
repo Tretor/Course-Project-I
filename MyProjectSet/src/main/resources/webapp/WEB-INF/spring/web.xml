@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<context-param>
+   <param-name>defaultHtmlEscape</param-name>
+   <param-value>false</param-value>
+</context-param>
+<!-- Serves static resource content from .jar files such as spring-js.jar -->
+<servlet>
+	<servlet-name>Resource Servlet</servlet-name>
+	<servlet-class>org.springframework.js.resource.ResourceServlet</servlet-class>
+</servlet>
+
+<!-- Map all /resources requests to the Resource Servlet for handling -->
+<servlet-mapping>
+	<servlet-name>Resource Servlet</servlet-name>
+	<url-pattern>/resources/js/*</url-pattern>
+</servlet-mapping>
+		

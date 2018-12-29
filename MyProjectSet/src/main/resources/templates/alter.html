@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Temporary page</title>
+    </head>
+    <body>
+        <div>Please select your action</div>
+        Hi <span th:text="${user_name}"></span>!
+
+        <h2>Change password:</h2>
+        <form action="#" th:action="@{/passwordchange}" method="POST">
+            <p><label for="newPassword">Enter new password</label>: <input type="password" name="newPassword" id="newPassword"/></p>
+            <p><label for="newPasswordConfirm">Confirm new password</label>: <input type="password" name="newPasswordConfirm" id="newPasswordConfirm"/></p>
+            <input type="hidden" name="username" th:value="${user_name}"/>
+            <p><input type="submit" value="Login" /></p>
+        </form>
+    </body>
+</html>

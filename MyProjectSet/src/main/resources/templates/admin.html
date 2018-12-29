@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>PC Parts admin panel</title>
+        <script th:src="@{/javascript/accessCheck.js}"></script>
+    </head>
+    <body>
+        <script type="text/javascript">checkCookie();</script>
+        <h2>Current PC parts list</h2>
+        <ul>
+            <li th:each="item : ${list}">
+                <div th:text="${item}" ></div>
+            </li>
+        </ul>
+        
+        <h2>Remove part from the list</h2>
+        <form action="#" th:action="@{/delete}" method="POST">
+            <p><label for="pcpartID">Enter Part ID</label>: <input type="text" name="pcpartID" id="pcpartID"/></p>
+            <p><input type="submit" value="Delete" /></p>
+        </form>
+    </body>
+</html>

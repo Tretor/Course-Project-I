@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>PC Parts Admin Logon</title>
+        <script th:src="@{/javascript/login.js}"></script>
+    </head>
+    <body>
+        <div>Enter credentials</div>
+        <form name="login">
+            Username<input type="text" name="username"/>
+            Password<input type="password" name="password"/>
+            <input type="button" onclick="check(this.form)" value="Login"/>
+        </form>
+    </body>
+</html>
